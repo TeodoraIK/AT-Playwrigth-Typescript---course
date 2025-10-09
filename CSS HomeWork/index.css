@@ -3,7 +3,11 @@ body {
     font-family: Arial, sans-serif;
 }
 
-h1, h2, h3, h4, footer {
+h1,
+h2,
+h3,
+h4,
+footer {
     text-align: center;
 }
 
@@ -12,7 +16,8 @@ h2 {
     margin-bottom: 10px;
 }
 
-h3, h4 {
+h3,
+h4 {
     margin: 5px 0;
 }
 
