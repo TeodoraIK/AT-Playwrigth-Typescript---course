@@ -56,7 +56,13 @@ else {
    console.log("numOne is not greater than 3"); 
 }
 
+// Union types 
+let id: string | number;
 
+id = 10;
+id = "10";
+
+let result: number | boolean | null;
 
 
 
