@@ -26,15 +26,29 @@ interface Customer {
 }
 const apple: Product = {name: "Apple", price: 2, category: "food"}; 
 const tShirt: Product = {name: "T-Shirt", price:20, category: "clothes"};
-//add more products especialy for electronic
+const headphones: Product = {name: "headphones", price: 50, category: "electronics"}
+const laptop: Product= {name: "laptop", price: 1000,category: "electronics"};
 
-const product = [apple]
+const product = [apple, tShirt, headphones,laptop];
 
-const customer: Customer = {
+const customer1: Customer = {
     name: 'Ivan Ivanov', 
-    email: 'ivan@emails.com', 
-    cart: product,
+    email: 'ivan@ivanov.com', 
+    cart: [apple, laptop]
 };
+
+const customer2: Customer = {
+    name: 'Tea Ivanova',
+    email: 'tea@ivanova.com',
+    cart: [tShirt, headphones]
+};
+
+function displayCart(customer: Customer) : void {
+    console.log(`Cart for ${customer.name}:`);
+    customer.cart.forEach((product) => {
+console.log(`- ${product.name} (${product.category}): $${product.price}`)
+    });
+}
 //add second customer + custom array with string product
 
 //add function displayCart - display cart sustomer name and products
