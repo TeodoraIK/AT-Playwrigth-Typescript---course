@@ -62,11 +62,12 @@ async function getData(): Promise<Product> {
     const response = await fetch("https://fakestoreapi.com/products/1");
     const data: Product = await response.json()
     return data;
-
-    console.log(`Title: ${data.title}`);
-    console.log(`Price: ${data.price}`);
-    console.log(`Category: ${data.category}`);
+//}catch (error: unknown) {
+    //console.error(error);
 }
+    //console.log(`Title: ${data.title}`);
+    //console.log(`Price: ${data.price}`);
+    //console.log(`Category: ${data.category}`);
 getData();
 
 //try catch finally
@@ -78,3 +79,22 @@ console.error(err)
 } finally {
     console.log ("JSON parser ready");
 }
+
+//try/catch/finally exercise
+
+function divideNumbers(numOne: number, numTwo: number) {
+    try {
+        if(numTwo === 0) {
+            throw new Error("Cannot devide by Zero!")
+        }
+else {
+    const resul: number = numOne / numTwo;
+console.log(`Result ${resul}`);
+}
+    } catch (err) {
+console.error(`Error: ${err}`);
+    }finally {
+console.log('Operation finished');
+    }
+}
+divideNumbers(28,2);
